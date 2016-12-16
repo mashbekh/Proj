@@ -5,25 +5,56 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
-		
-	<servlet>
+			<servlet>
     <servlet-name>Jersey</servlet-name>
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
     <init-param>
         <param-name>jersey.config.server.provider.packages</param-name>
-        <param-value>com.jpa</param-value>
+        <param-value>com.setup</param-value>
+        
     </init-param>
     <load-on-startup>1</load-on-startup>
 </servlet>
+
  
 <servlet-mapping>
     <servlet-name>Jersey</servlet-name>
     <url-pattern>/rest/*</url-pattern>
 </servlet-mapping>
+
+
+			  	<servlet>
+    <servlet-name>Details</servlet-name>
+    <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+    <init-param>
+        <param-name>jersey.config.server.provider.packages</param-name>
+        <param-value>com.personal_details</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+
+ 
+<servlet-mapping>
+    <servlet-name>Details</servlet-name>
+    <url-pattern>/rest1/*</url-pattern>
+</servlet-mapping>
+
+
+	<!--  <servlet>
+		<servlet-name>Tax</servlet-name>
+		<servlet-class>com.jpa.JpalinkServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Tax</servlet-name>
+		<url-pattern>/jpalink</url-pattern>
+	</servlet-mapping>
+	-->
+	
+
 	
 
 	<welcome-file-list>
 	    
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>home.html</welcome-file>
 	</welcome-file-list>
 </web-app>

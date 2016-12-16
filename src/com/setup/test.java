@@ -1,10 +1,10 @@
-package com.jpa;
+package com.setup;
 
 public class test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Eclipselinktest e = new Eclipselinktest();
+		Register e = new Register();
         System.out.println(e.abc());
 
 	}

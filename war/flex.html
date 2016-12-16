@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.1/jquery-ui.js" type="text/javascript"></script>
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.1/themes/blitzer/jquery-ui.css"
+    rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="jarvis/css/jquery.flexdatalist.min.css">
+     
+ <body >
+<input list="browser" id="number">
+<datalist id="browser">
+    <option data-customvalue="Abc" value="Firefox">Firefox</option>
+    <option data-customvalue="Def" value="Chrome">2</option>
+    <option data-customvalue="Ghi" value="Explorer">3</option>
+</datalist>
+
+</body>
+
+<script>
+
+$('#number').on('input', function() {
+    var value = $(this).val();
+    alert($('#browser [value="' + value + '"]').data('customvalue'));
+});
+;
+
+</script>
+
+<script>
+$('.flexdatalist').flexdatalist({
+     minLength: 1
+});
+</script>
+<script src="jarvis/js/jquery.flexdatalist.min.js"></script>
+
+
+
+
+</html>

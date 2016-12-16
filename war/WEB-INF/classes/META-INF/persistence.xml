@@ -6,7 +6,9 @@
 
     <persistence-unit name="Demo" transaction-type="RESOURCE_LOCAL">
         <provider></provider>
-         <class>com.jpa.Student</class>
+         <class>com.setup.Student</class>
+         <class>com.setup.User_login</class>
+          <class>com.personal_details.Company_Profile</class>
         <properties>
             <property name="datanucleus.NontransactionalRead" value="true"/>
             <property name="datanucleus.NontransactionalWrite" value="true"/>

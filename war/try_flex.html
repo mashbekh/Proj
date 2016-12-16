@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.1/jquery-ui.js" type="text/javascript"></script>
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.1/themes/blitzer/jquery-ui.css"
+    rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="jarvis/css/jquery.flexdatalist.min.css">
+     
+ <body onload="getcars();">
+ <input  list='languages'  id="a">
+
+<datalist id="languages">
+   <option data-customvalue="1" value="PHP">PHP</option>
+    <option data-customvalue="2" value="JAVA">JAVA</option>
+    <option data-customvalue="3" value="JAVASCRIPT">JAVASCRIPT</option>
+</datalist>
+</body>
+
+<script>
+/*
+$('#a').on('input', function() {
+    var value = $(this).val();
+    alert(value);
+   var x =  $('#languages [value="' + value + '"]').data('customvalue');
+   alert(x);
+});
+*/
+</script>
+
+<script>
+
+function getcars() {
+    var url, carOption;
+    url = 'jarvis/js/cars.json';
+
+    $.getJSON(url, function(data) {
+   
+        $(data.osCars).each(function() {
+            carsOption = "<option data-customvalue='" + this.id+ "'" + " "  +  "value='" + this.name + "'>" + this.name + "</option>";
+           //alert(carsOption);
+            $('#languages').append(carsOption);
+        });
+    });
+}
+
+
+
+
+
+$('#a').flexdatalist({
+     minLength: 1
+});
+</script>
+<script src="jarvis/js/jquery.flexdatalist.min.js"></script>
+
+
+
+
+</html>

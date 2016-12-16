@@ -14,6 +14,7 @@
   <system-properties>
     <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
      <property name="local.cloud.connection" value="jdbc:mysql://104.197.49.55:3306/Inward_dev?user=root&amp;password=Thepath1728$" />
+     <property name="local.sql.connection"   value="jdbc:mysql://127.0.0.1:3306/Inward_dev?user=root&amp;PASSWORD=vistar&amp;useSSL=false" />
   </system-properties>
 
   <!--

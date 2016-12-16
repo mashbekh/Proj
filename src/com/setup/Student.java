@@ -1,4 +1,4 @@
-package com.jpa;
+package com.setup;
 import javax.persistence.*;
 
 @Entity
